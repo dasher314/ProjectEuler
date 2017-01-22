@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <math.h>
+
+int isPal(int n) {
+  int res[6];
+  int i,j=0;
+  while (n>0) {
+    j++;
+    res[0] = n%10; 
+    n = n%10;
+  } 
+
+ for (i=0; i<=j/2; i++,j--) {
+  if (res[i] != res[j]) return(0);
+ }
+ 
+ return(1);
+}
+ 
+
+int main (void) {
+  int i=900, j=900;
+  int prod=0;
+
+  printf("%i\n", isPal(9009));
+
+//  for (i, i<1000; i++) {
+    //for (j, j<1000, j++) {
+}
+
