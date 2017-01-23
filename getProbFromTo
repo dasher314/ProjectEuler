@@ -1,0 +1,12 @@
+#!/bin/tcsh
+
+set start = $1
+set end = $2
+
+while ($start <= $end) 
+  mkdir p${start};
+  cd p${start};
+  wget --user='dasher314' --password='mypasswd' https://projecteuler.net/problem=${start} -O p${start}.xml
+  cd ..
+  set start = `expr $start + 1`
+end
